@@ -109,7 +109,7 @@ from tqdm import tqdm
 highest_accuracy = 0.0
 highest_sensitivity = 0.0
 highest_specificity = 0.0
-highest_auc = 0.0  # 添加最高AUC值的记录变量
+highest_auc = 0.0  # add the highest AUC value
 for epoch in range(100):
     model.train()
     total_loss = 0
@@ -142,7 +142,7 @@ for epoch in range(100):
     auc_score = roc_auc_score(all_labels, all_preds)
     print(f'Epoch {epoch + 1}/{100} | Loss: {total_loss / len(train_data_loader)} | Accuracy: {total_correct / total_count} | AUC: {auc_score}')
     # if (epoch+1)%10==0:
-    # 测试集评估
+    # test 
     model.eval()
     total_correct = 0
     total_count = 0
