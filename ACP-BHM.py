@@ -49,7 +49,7 @@ train_dataset = SequenceClassificationDataset(
     sequences=sequences_train,
     labels=labels_train,
     tokenizer=tokenizer,
-    max_length=128
+    max_length=50
 )
 train_data_loader = DataLoader(
     train_dataset,
@@ -61,7 +61,7 @@ test_dataset = SequenceClassificationDataset(
     sequences=sequences_test,
     labels=labels_test,
     tokenizer=tokenizer,
-    max_length=128
+    max_length=50
 )
 test_data_loader = DataLoader(
     test_dataset,
